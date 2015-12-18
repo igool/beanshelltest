@@ -1,0 +1,35 @@
+import org.apache.commons.lang.builder.ToStringBuilder;
+import com.igool.beanshelltest.*;
+
+public class ResultE  {
+
+	private int code;
+	
+	private String message;
+
+	public int getCode()
+	{
+		return code;
+	}
+
+	public void setCode(int code)
+	{
+	
+		this.code = code+10;
+	}
+
+	public String getMessage()
+	{
+		return message;
+	}
+
+	public void setMessage(String message)
+	{
+		this.message = message;
+	}
+	
+	public String toString(){
+	//return "aaaa";
+		return ToStringBuilder.reflectionToString(this);
+	}
+}
